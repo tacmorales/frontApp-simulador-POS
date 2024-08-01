@@ -9,37 +9,97 @@
 			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
 			crossorigin="anonymous"
 		/>
-
+		<link rel="stylesheet" href="assets/styles/style.css" />
 		<title>POSAPPTAC</title>
 	</head>
 	<body>
 		<main class="container">
 			<div class="row">
-				<div class="col-12 col-md-3">
-					<form>
-						<div class="mb-3">
-							<label for="exampleInputEmail1" class="form-label">Email address</label>
-							<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-							<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+				<div class="col-12 col-md-4 py-4">
+					<form id="formulario">
+						<div>
+							<select id="form-productName" class="form-select form-select-lg" aria-label="Seleccione un producto" >
+								<option value="Seleccione un producto" selected disabled>Seleccione un producto</option>
+								<option value="Foto 10x15">Foto 10x15</option>
+								<option value="Foto 13x18">Foto 13x18</option>
+								<option value="Foto 15x21">Foto 15x21</option>
+								<option value="Foto 20x30">Foto 20x30</option>
+								<option value="Foto 25x35">Foto 25x35</option>
+								<option value="Foto 30x40">Foto 30x40</option>
+								<option value="Foto 40x60">Foto 40x60</option>
+								<option value="Foto 60x80">Foto 60x80</option>
+							</select>
 						</div>
-						<div class="mb-3">
-							<label for="exampleInputPassword1" class="form-label">Password</label>
-							<input type="password" class="form-control" id="exampleInputPassword1" />
+						<div id="message-productName" class="d-none text-danger mb-3">Por favor seleccione un producto.</div>
+						<div class="input-group my-3">
+							<span class="input-group-text">$</span>
+							<div class="form-floating">
+								<input
+									id="form-price"
+									type="number"
+									class="form-control"
+									aria-label="Ingrese un precio en pesos chilenos (chilean pesos)"
+									placeholder="Precio en pesos chilenos"
+									
+								/>
+								<label id="label-price" for="form-price">Precio en pesos chilenos</label>
+							</div>
+							<span class="input-group-text">CLP</span>
 						</div>
-						<div class="mb-3 form-check">
-							<input type="checkbox" class="form-check-input" id="exampleCheck1" />
-							<label class="form-check-label" for="exampleCheck1">Check me out</label>
+						<div class="input-group mb-3">
+							<div class="form-floating">
+								<input
+									id="form-quantity"
+									type="number"
+									class="form-control"
+									aria-label="Ingrese un precio en pesos chilenos (chilean pesos)"
+									placeholder="Cantidad del producto"
+									
+								/>
+								<label id="label-quantity" for="form-quantity">Cantidad del producto</label>
+							</div>
+							<span class="input-group-text">unidades</span>
 						</div>
-						<button type="submit" class="btn btn-primary">Submit</button>
+						<button type="submit" class="btn btn-primary">Registrar</button>
 					</form>
 				</div>
-				<div class="col-12 col-md-9"></div>
+
+				<div class="col-12 col-md-8 py-4">
+					<table id="product-table" class="table table-dark table-hover table-striped">
+						<thead>
+							<tr>
+								<th scope="col">Producto</th>
+								<th scope="col">Cantidad</th>
+								<th scope="col">Precio</th>
+								<th scope="col">SubTotal</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
+				<div class="col-12"></div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-md-4">
+					<!-- nada -->
+				</div>
+				<div class="col-12 col-md-6 text-end">
+					<!-- nada -->
+				</div>
+				<div id="total-price" class="col-12 col-md-2 bg-gradient bg-black text-white h4 align-content-center">Precio total</div>
 			</div>
 		</main>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+			integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 			crossorigin="anonymous"
 		></script>
+		<script src="assets/scripts/script.js"></script>
 	</body>
 </html>

@@ -1,0 +1,7 @@
+option[disabled] {
+     color: #555;
+}
+
+#total-price{
+  min-height: 50px;
+}
